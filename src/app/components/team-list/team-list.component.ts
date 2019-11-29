@@ -22,7 +22,9 @@ export class TeamListComponent implements OnInit {
       }
     );  
     this.getFavorites();
+    if(JSON.parse(localStorage.getItem('favorites'))){
     this.cont = JSON.parse(localStorage.getItem('favorites')).length;
+    }
   }
 
   addToFavorite(idTeam: String){
@@ -58,8 +60,10 @@ export class TeamListComponent implements OnInit {
 
   getFavorites(){
     if(localStorage.length != 0){
-     this.favorites = JSON.parse(localStorage.getItem('favorites'));
-    }else
-    this.favorites = [];
- }
+      this.favorites = JSON.parse(localStorage.getItem('favorites'));
+      if(this.favorites==null){
+        this.favorites = [];
+      }
+    }
+    }
 }
