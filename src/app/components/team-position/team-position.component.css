@@ -1,0 +1,7 @@
+.selected {
+    background-color: rgb(150, 196, 248);
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: black;
+    ;
+}

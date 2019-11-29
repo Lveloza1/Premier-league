@@ -1,0 +1,30 @@
+<mat-tab-group>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <span><i class="fas fa-money-check"></i> Details</span>
+        </ng-template>
+        <br>
+        <app-team-detail [idTeam]="idTeam"></app-team-detail>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <span><i class="fas fa-id-badge"></i> Squad</span>
+        </ng-template>
+        <br>
+        <app-team-squad [idTeam]="idTeam"></app-team-squad>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <span><i class="fas fa-calendar-alt"></i> Events</span>
+        </ng-template>
+        <br>
+        <app-team-events [idTeam]="idTeam"></app-team-events>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <span><i class="fas fa-list"></i> Positions</span>
+        </ng-template>
+        <br>
+        <app-team-position [idTeam]="idTeam"></app-team-position>
+    </mat-tab>
+</mat-tab-group>

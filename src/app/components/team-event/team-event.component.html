@@ -1,0 +1,86 @@
+<div class="container">
+    <div *ngFor="let event of eventArray">
+        <button class="btn btn-dark" routerLink="/profile/{{idTeam}}"><i class="fas fa-undo"></i> Back</button>
+        <h3>{{event.strEvent}}</h3>
+        <img src="{{event.strThumb}}" alt="Not image avialable for this event" class="card-top img-fluid">
+        <p> (Home) {{event.strHomeTeam}} {{event.intHomeScore}} - (Away) {{event.strAwayTeam}} {{event.intAwayScore}}</p>
+        date: {{event.dateEvent}} time: {{event.strTime}}
+        <div class="card border-light mb-2">
+            <div class="card-header">
+                {{event.strHomeTeam}}
+            </div>
+            <div class="card-body">
+                <p><span class="lead badge-pill badge-light"><i class="fas fa-stopwatch"></i> Goal details:</span> {{ event.strHomeGoalDetails || "no details"}}</p>
+                <p><span class="lead badge-pill badge-danger"><i class="fas fa-clone"></i> Red cards:</span> {{ event.strHomeRedCards || "none" }}</p>
+                <p></p>
+                <p><span class="lead badge-pill badge-warning"><i class="fas fa-clone"></i> Yellow cards:</span> {{ event.strHomeYellowCards || "none" }}</p>
+                <div class="card text-white bg-success">
+                    <div class="card-header">
+                        <p class="lead">LineUP</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3 bg-secondary">Goalkeeper</div>
+                            <div class="col-9 bg-light">{{event.strHomeLineupGoalkeeper}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 bg-secondary">Defense</div>
+                            <div class="col-9 bg-light">{{event.strHomeLineupDefense}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 bg-secondary">Midfield</div>
+                            <div class="col-9 bg-light">{{event.strHomeLineupMidfield}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 bg-secondary">Forward</div>
+                            <div class="col-9 bg-light">{{event.strHomeLineupForward}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 bg-secondary">Substitutes</div>
+                            <div class="col-9 bg-light">{{event.strHomeLineupSubstitutes}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card border-light mb-2">
+            <div class="card-header">
+                {{event.strAwayTeam}}
+            </div>
+            <div class="card-body">
+                <p><span class="lead badge-pill badge-light"><i class="fas fa-stopwatch"></i> Goal details:</span> {{ event.strAwayGoalDetails || "no details"}}</p>
+                <p><span class="lead badge-pill badge-danger"><i class="fas fa-clone"></i> Red cards:</span> {{ event.strAwayRedCards || "none" }}</p>
+                <p></p>
+                <p><span class="lead badge-pill badge-warning"><i class="fas fa-clone"></i> Yellow cards:</span> {{ event.strAwayYellowCards || "none" }}</p>
+                <div class="card text-white bg-success">
+                    <div class="card-header">
+                        <p class="lead">LineUP</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3 bg-secondary">Goalkeeper</div>
+                            <div class="col-9 bg-light">{{event.strAwayLineupGoalkeeper}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 bg-secondary">Defense</div>
+                            <div class="col-9 bg-light">{{event.strAwayLineupDefense}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 bg-secondary">Midfield</div>
+                            <div class="col-9 bg-light">{{event.strAwayLineupMidfield}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 bg-secondary">Forward</div>
+                            <div class="col-9 bg-light">{{event.strAwayLineupForward}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 bg-secondary">Substitutes</div>
+                            <div class="col-9 bg-light">{{event.strAwayLineupSubstitutes}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>

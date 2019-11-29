@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="{{team.strTeamBadge}}" alt="{{team.strTeam}}" class="card-top img-fluid">
+                <img src="{{team.strTeamLogo}}" alt="{{team.strTeamLogo}}" class="card-top img-fluid">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{team.strTeam}}</h5>
+                    <p class="card-text text-justify">{{team.strDescriptionEN}}</p>
+                    <p><small class="text-muted">Formed in {{team.intFormedYear}}</small></p>
+                    <p><small class="text-muted">Country: {{team.strCountry}}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h4 class="text-center">{{team.strStadium}} Stadium</h4>
+    <img src="{{team.strStadiumThumb}}" alt="{{team.strStadiumThumb}}" class="card-top img-fluid">
+    <pre>Capacity: {{team.intStadiumCapacity}} pepole.</pre>
+    <p class="text-justify">{{team.strStadiumDescription}}</p>
+    <div class="card bg-light mb-3" style="max-width: 20rem;">
+        <div class="card-header">Team Jersey</div>
+        <div class="card-body">
+            <img src="{{team.strTeamJersey}}" alt="{{team.strTeamLogo}}" class="card-top img-fluid">
+        </div>
+    </div>
+    <p>{{team.strTeam}} official Web-site</p>
+    <a class="nav-link" href="https://{{team.strWebsite}}" target="_blank"><i class="fas fa-globe">{{team.strWebsite}}</i></a>
+    <p>{{team.strTeam}} Social Media</p>
+    <div class="btn-group">
+        <a class="btn btn-link" href="https://{{team.strFacebook}}" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a class="btn btn-link" href="https://{{team.strTwitter}}" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        <a class="btn btn-link" href="https://{{team.strInstagram}}" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a class="btn btn-link" href="https://{{team.strYoutube}}" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+</div>

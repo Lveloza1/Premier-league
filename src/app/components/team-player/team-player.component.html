@@ -1,0 +1,20 @@
+<div class="container">
+
+    <button class="btn btn-dark" routerLink="/profile/{{idTeam}}"><i class="fas fa-undo"></i> Back</button>
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="{{player.strThumb}}" alt="{{player.strPlayer}}" class="card-img img-fluid">
+                <p class="card-text"><small class="text-muted">Birth: {{player.dateBorn}}</small></p>
+                <hr>
+                <p class="card-text"><small class="text-muted">Dorsal Number: {{player.strNumber || "--"}}</small></p>
+                <p class="card-text"><small class="text-muted">Player Position: {{player.strPosition}}</small></p>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title">{{player.strPlayer}}</h4>
+                    <p class="card-text">{{player.strDescriptionEN}}</p>
+                </div>
+            </div>
+        </div>
+    </div>

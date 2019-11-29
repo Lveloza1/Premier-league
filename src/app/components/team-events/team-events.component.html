@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-6">
+        <div class="card text-white border-light mb-1">
+            <div class="card-header">LAST FIVE EVENTS</div>
+            <div class="card-body">
+                <div class="card text-white bg-primary mb-1" *ngFor="let last of lastevents">
+                    <div class="card-header">{{last.strEvent}}</div>
+                    <div class="card-body">
+                        <p class="card-text">{{last.strHomeTeam}} <b>{{last.intHomeScore}}</b> - {{last.strAwayTeam}} <b>{{last.intAwayScore}}</b></p>
+                        <button class="btn btn-info" routerLink="/profile/{{idTeam}}/event/{{last.idEvent}}"><i class="far fa-eye"></i> See Results and details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card text-white border-light mb-1">
+            <div class="card-header">NEXT EVENTS</div>
+            <div class="card-body">
+                <div class="card text-white bg-primary mb-1" *ngFor="let next of nextevents">
+                    <div class="card-header">{{next.strEvent}}</div>
+                    <div class="card-body">
+                        <p class="card-text"><i class="far fa-calendar-alt"> {{next.dateEvent}}</i> - <i class="far fa-clock"> {{next.strTime}}</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card text-white border-light mb-1">
+    <div class="card-header">
+        <button data-toggle="collapse" href="#eventList" role="button" aria-expanded="false" aria-controls="eventList" class="btn btn-info">
+        <i class="fas fa-caret-down"></i> All Season Events
+    </button>
+    </div>
+    <div class="collapse multi-collapse" id="eventList">
+        <div class="card-body">
+            <div *ngFor="let event of allevents">
+                <div class="card text-white bg-primary mb-1" *ngIf="event.idHomeTeam==idTeam || event.idAwayTeam==idTeam">
+                    <div class="card-header">{{event.strEvent}}</div>
+                    <div class="card-body">
+                        <p class="card-text"><i class="far fa-calendar-alt"> {{event.dateEvent}}</i> - <i class="far fa-clock"> {{event.strTime}}</i></p>
+                        <div *ngIf="event.intHomeScore!=null && event.intAwayScore!=null">
+                            Game Played.
+                            <button class="btn btn-info" routerLink="/profile/{{idTeam}}/event/{{event.idEvent}}">
+                                <i class="far fa-eye"></i> See Results and details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
